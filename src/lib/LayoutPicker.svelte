@@ -26,14 +26,15 @@
         justify-content: space-between;
         width: 3em;
         height: 3em;
-        border: 1px solid var(--gray-300);
+        border: 1px solid var(--secondary);
         background-size: contain;
         border-radius: 5px;
         font-size: 1.2rem;
+        cursor: pointer;
     }
 
     #blank {
-        background-color: transparent;
+        background-color: white;
     }
 
     #lined {
@@ -53,6 +54,6 @@
     }
 
     .selected {
-        border: 3px solid var(--gray-300);
+        border: 3px solid var(--secondary);
     }
 </style>

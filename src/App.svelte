@@ -48,29 +48,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 10vh;
+        width: 100vw;
+        height: 100vh;
     }
 
     h1 {
         margin-bottom: 10vh;
         color: var(--primary);
         font-family: "Playfair Display";
-        font-size: 5rem;
+        font-size: 4.5rem;
         font-weight: 500;
         text-align: center;
     }
 
     p {
         margin-bottom: 1rem;
+        color: var(--secondary);
         font-size: 1.2rem;
         font-weight: 500;
-        text-align: c;
     }
 
     .generator {
         display: flex;
         align-items: center;
-        margin-bottom: 10vh;
+        margin-bottom: 15vh;
     }
 
     .color-picker {
@@ -89,18 +90,19 @@
     }
 
     button {
-        padding: 1em 2em;
+        padding: 1em 5em;
         border: none;
         border-radius: 5px;
-        color: var(--white);
+        color: var(--background);
         background-color: var(--primary);
         font-size: 1.2rem;
         font-weight: 600;
         letter-spacing: 0.5px;
+        cursor: pointer;
     }
 
     button:hover {
-        box-shadow: 1px 1px 20px var(--gray-300);
+        box-shadow: 1px 1px 20px var(--secondary);
     }
 
     button:active {

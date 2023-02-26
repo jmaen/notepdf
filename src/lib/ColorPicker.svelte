@@ -19,6 +19,7 @@
 <main>
     <div class="color-picker">
         <div class="color-preview" style="background-color: {value}"></div> 
+        <!-- TODO on:paste -->
         <input class="color-input" bind:value={value} on:input={validateInput}/>
     </div>
 </main>
@@ -27,7 +28,7 @@
     .color-picker {
         display: inline-flex;
         justify-content: space-between;
-        border: 1px solid var(--gray-300);
+        border: 1px solid var(--secondary);
         border-radius: 5px;
         font-size: 1.2rem;
         overflow: hidden;
