@@ -5,6 +5,7 @@
 
     let colorPicker
     let layoutPicker
+    let animate
 
     function generate() {
         const color = colorPicker.getValue()
@@ -25,12 +26,14 @@
 
 <main>
     <h1>
-        Generate  <span class="bold">colorful</span>  note templates
+        Generate  <span class="color" class:animate={animate}>
+            <span style="--i: 1">c</span><span style="--i: 2">o</span><span style="--i: 3">l</span><span style="--i: 4">o</span><span style="--i: 5">r</span><span style="--i: 6">f</span><span style="--i: 7">u</span><span style="--i: 8">l</span>
+        </span> <span/> <span class="no-break">note templates</span>
     </h1>
     <div class="generator">
         <div class="color-picker">
             <p>Choose a color:</p>
-	        <ColorPicker bind:this={colorPicker}/>
+	        <ColorPicker bind:this={colorPicker} bind:animate={animate}/>
         </div>
         <div class="layout-picker">
             <p>Choose a layout:</p>
@@ -53,6 +56,7 @@
     }
 
     h1 {
+        margin: 0 2vw;
         margin-bottom: 15vh;
         color: var(--primary);
         font-family: "Poppins";
@@ -62,7 +66,7 @@
         white-space: pre-wrap;
     }
 
-    .bold {
+    .color {
         color: #ECD15F;
         font-family: "Niconne";
         font-size: 7rem;
@@ -70,6 +74,32 @@
         text-shadow: 3px 3px 0px var(--primary), 
                   6px 6px 0px #46B59B, 
                   9px 9px 0px #017E7F;
+    }
+
+    .animate span {
+        position: relative;
+        display: inline-block;
+        animation: jump 1s infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    @keyframes jump {
+        0%, 40%, 100% {
+            transform: translateY(0);
+        }
+        20% {
+            transform: translateY(-1rem);
+        }
+    }
+
+    .no-break {
+        white-space: nowrap;
+    }
+
+    @media screen and (max-width: 366px) {
+        .no-break {
+            white-space: inherit;
+        }
     }
 
     p {

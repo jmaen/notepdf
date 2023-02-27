@@ -1,13 +1,16 @@
 <script>
 	let value = '#c7c1c3'
     let oldValue = value
+    export let animate = false
 
     export function getValue() {
         return value
     }
 
     function validateInput() {
-        const regex = /^#([A-Fa-f0-9]{0,6})$/
+        animate = value == "brow"
+
+        const regex = /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/
         if(!regex.test(value)) {
             value = oldValue
         } else {
@@ -19,8 +22,7 @@
 <main>
     <div class="color-picker">
         <div class="color-preview" style="background-color: {value}"></div> 
-        <!-- TODO on:paste -->
-        <input class="color-input" bind:value={value} on:input={validateInput}/>
+        <input class="color-input" bind:value={value} on:change={validateInput}/>
     </div>
 </main>
 
