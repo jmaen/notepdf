@@ -8,7 +8,7 @@
     }
 
     function validateInput() {
-        animate = value == "brow"
+        animate = value.toLowerCase() == "brow"
 
         const regex = /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/
         if(!regex.test(value)) {

@@ -74,6 +74,7 @@
         text-shadow: 3px 3px 0px var(--primary), 
                   6px 6px 0px #46B59B, 
                   9px 9px 0px #017E7F;
+        white-space: nowrap;
     }
 
     .animate span {
