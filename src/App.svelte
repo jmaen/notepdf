@@ -25,7 +25,7 @@
 
 <main>
     <h1>
-        Generate <span class="bold">PDF templates</span> for notes
+        Generate  <span class="bold">colorful</span>  note templates
     </h1>
     <div class="generator">
         <div class="color-picker">
@@ -53,12 +53,23 @@
     }
 
     h1 {
-        margin-bottom: 10vh;
+        margin-bottom: 15vh;
         color: var(--primary);
-        font-family: "Playfair Display";
-        font-size: 4.5rem;
+        font-family: "Poppins";
+        font-size: 4rem;
         font-weight: 500;
         text-align: center;
+        white-space: pre-wrap;
+    }
+
+    .bold {
+        color: #ECD15F;
+        font-family: "Niconne";
+        font-size: 7rem;
+        font-weight: 700;
+        text-shadow: 3px 3px 0px var(--primary), 
+                  6px 6px 0px #46B59B, 
+                  9px 9px 0px #017E7F;
     }
 
     p {
@@ -79,8 +90,13 @@
     }
 
     @media screen and (max-width: 768px) {
+        h1 {
+            margin-bottom: 10vh;
+        }
+
         .generator {
             flex-direction: column;
+            margin-bottom: 10vh;
         }
 
         .color-picker {
@@ -96,7 +112,7 @@
         color: var(--background);
         background-color: var(--primary);
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: 0.5px;
         cursor: pointer;
     }
