@@ -77,15 +77,29 @@
         white-space: nowrap;
     }
 
-    .animate span {
+    .color span {
         position: relative;
         display: inline-block;
-        animation: jump 1s infinite;
+        animation: slow-jump 10s infinite;
         animation-delay: calc(0.1s * var(--i));
     }
 
-    @keyframes jump {
-        0%, 40%, 100% {
+    @keyframes slow-jump {
+        0%, 20%, 100% {
+            transform: translateY(0);
+        }
+        5% {
+            transform: translateY(-1rem);
+        }
+    }
+
+    .animate span {
+        animation: fast-jump 1s infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    @keyframes fast-jump {
+        0%, 80%, 100% {
             transform: translateY(0);
         }
         20% {
