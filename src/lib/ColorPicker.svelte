@@ -1,5 +1,5 @@
 <script>
-	let value = '#c7c1c3'
+	let value = '#abcdef'
     let oldValue = value
     export let animate = false
 
@@ -8,7 +8,7 @@
     }
 
     function validateInput() {
-        animate = value.toLowerCase() == "brow"
+        animate = btoa(value.toLowerCase()) == "YnJvdw=="
 
         const regex = /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/
         if(!regex.test(value)) {

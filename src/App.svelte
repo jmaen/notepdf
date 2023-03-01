@@ -26,9 +26,16 @@
 
 <main>
     <h1>
-        Generate  <span class="color" class:animate={animate}>
-            <span style="--i: 1">c</span><span style="--i: 2">o</span><span style="--i: 3">l</span><span style="--i: 4">o</span><span style="--i: 5">r</span><span style="--i: 6">f</span><span style="--i: 7">u</span><span style="--i: 8">l</span>
-        </span> <span/> <span class="no-break">note templates</span>
+        Generate  <div class="color" class:animate={animate}>
+            <span>c</span>
+            <span>o</span>
+            <span>l</span>
+            <span>o</span>
+            <span>r</span>
+            <span>f</span>
+            <span>u</span>
+            <span>l</span>
+        </div> <span/> <span class="no-break">note templates</span>
     </h1>
     <div class="generator">
         <div class="color-picker">
@@ -67,6 +74,7 @@
     }
 
     .color {
+        display: inline-flex;
         color: #ECD15F;
         font-family: "Niconne";
         font-size: 7rem;
@@ -77,33 +85,65 @@
         white-space: nowrap;
     }
 
+    .color span:nth-child(1) {
+        --i: 1;
+    }
+
+    .color span:nth-child(2) {
+        --i: 2;
+    }
+
+    .color span:nth-child(3) {
+        --i: 3;
+    }
+
+    .color span:nth-child(4) {
+        --i: 4;
+    }
+
+    .color span:nth-child(5) {
+        --i: 5;
+    }
+
+    .color span:nth-child(6) {
+        --i: 6;
+    }
+
+    .color span:nth-child(7) {
+        --i: 7;
+    }
+
+    .color span:nth-child(8) {
+        --i: 8;
+    }
+
     .color span {
         position: relative;
         display: inline-block;
-        animation: slow-jump 10s infinite;
+        animation: bounce 7s infinite;
         animation-delay: calc(0.1s * var(--i));
     }
 
-    @keyframes slow-jump {
-        0%, 20%, 100% {
+    @keyframes bounce {
+        0%, 40%, 100% {
             transform: translateY(0);
         }
-        5% {
+        10% {
             transform: translateY(-1rem);
         }
     }
 
     .animate span {
-        animation: fast-jump 1s infinite;
+        animation: wave 1s infinite ease-in-out;
         animation-delay: calc(0.1s * var(--i));
     }
 
-    @keyframes fast-jump {
-        0%, 80%, 100% {
+    @keyframes wave {
+        0%, 100% {
             transform: translateY(0);
         }
-        20% {
-            transform: translateY(-1rem);
+        50% {
+            transform: translateY(-3rem);
         }
     }
 
