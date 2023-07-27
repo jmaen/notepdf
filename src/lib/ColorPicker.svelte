@@ -8,7 +8,7 @@
     }
 
     function validateInput() {
-        animate = btoa(value.toLowerCase()) == "YnJvdw=="
+        animate = btoa(value.toLowerCase()) == "YW5ueQ=="
 
         const regex = /^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$/
         if(!regex.test(value)) {
